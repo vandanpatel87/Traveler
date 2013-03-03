@@ -1,0 +1,27 @@
+<h2>Listing destinations</h2>
+
+<table class = "table table-striped table-bordered">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @destinations.each do |destination| %>
+  <tr>
+    <td><%= destination.name %></td>
+    <td><%= destination.description %></td>
+    <td><%= link_to 'Show', destination %></td>
+    <td><%= link_to 'Edit', edit_destination_path(destination) %></td>
+    <td><%= link_to 'Destroy', destination, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<p>
+  <button class = "btn" type = "button"><%= link_to 'New Destination', new_destination_path %> </button>
+</p>

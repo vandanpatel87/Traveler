@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @trip.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @trip.description %>
+</p>
+
+<table class = "table table-striped table-bordered">
+	<tr>
+		<th>Destination</th>
+		<th>Description</th>
+	</tr>
+
+	<% @trip.destinations.each do |destination| %>
+		<tr>
+			<td><%= link_to destination.name, edit_trip_destination_path(@trip, destination) %></td>
+			<td><%= destination.description %></td>
+		</tr>
+		<% end %>
+</table>
+
+<p>
+	<button class = "btn" type = "button">	<%= link_to 'New Destination', new_trip_destination_path(@trip) %>  </button>
+</p>
+
+<button class = "btn" type = "button"><%= link_to 'Edit', edit_trip_path(@trip) %> </button>
+<button class = "btn" type = "button"><%= link_to 'Back', trips_path %> </button>
