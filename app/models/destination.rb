@@ -3,5 +3,4 @@ class Destination < ActiveRecord::Base
 
   belongs_to :trip
 
-  validate_presence_of :name
 end

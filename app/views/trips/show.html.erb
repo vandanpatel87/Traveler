@@ -25,8 +25,8 @@
 </table>
 
 <p>
-	<button class = "btn" type = "button">	<%= link_to 'New Destination', new_trip_destination_path(@trip) %>  </button>
+	<%= link_to 'New Destination', new_trip_destination_path(@trip) %> 
 </p>
 
-<button class = "btn" type = "button"><%= link_to 'Edit', edit_trip_path(@trip) %> </button>
-<button class = "btn" type = "button"><%= link_to 'Back', trips_path %> </button>
+<%= link_to 'Edit', edit_trip_path(@trip) %> |
+<%= link_to 'Back', trips_path %> 
