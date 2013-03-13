@@ -3,4 +3,6 @@ class Trip < ActiveRecord::Base
 
   has_many :destinations
 
+  validates :name, :presence => true
+
 end
